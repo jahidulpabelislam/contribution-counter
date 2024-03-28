@@ -63,3 +63,4 @@ typings/
 .idea/
 
 dev-test.js
+.DS_Store

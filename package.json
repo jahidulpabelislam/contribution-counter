@@ -30,7 +30,7 @@
         "/lib"
     ],
     "dependencies": {
-        "axios": "^0.26.0"
+        "axios": "^1.6.8"
     },
     "devDependencies": {
         "@jahidulpabelislam/codestyles": "^1.1.1"

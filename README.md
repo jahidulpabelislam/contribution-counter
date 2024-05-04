@@ -97,6 +97,6 @@ If you find any issues or have any feature requests, you can open an [issue](htt
 
   - [Jahidul Pabel Islam](https://jahidulpabelislam.com/) [<me@jahidulpabelislam.com>](mailto:me@jahidulpabelislam.com)
 
-## License
+## Licence
 
-This module is licensed under the General Public License - see the [License](LICENSE.md) file for details
+This module is licenced under the General Public Licence - see the [Licence](LICENSE.md) file for details

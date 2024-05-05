@@ -35,7 +35,9 @@ This contribution counter is for 3 VCSs: GitHub, Bitbucket &amp; GitLab and is a
     -  `username`: Your username (string:required)
     -  `accessToken`: An access token for the user above (string:required)
     -  `minCommits`: The minimum number of commits a repo needs to count as a contribution (int:default=1)
-    -  `includePullRequests`: Whether to include count of pull/merge requests contributions (bool:default=false)
+    -  `includeCommits`: Whether to include count of your commits (bool:default=true)
+    -  `includeProjects`: Whether to include count of repo/projects you've contributed to (bool:default=true)
+    -  `includePullRequests`: Whether to include count of pull/merge request contributions (bool:default=false)
 
    The below two are only used if a commit doesn't have a real user attached (At least one is required for Bitbucket & GitLab & both optional for GitHub BUT advised to use both for all)
 
@@ -63,11 +65,11 @@ This contribution counter is for 3 VCSs: GitHub, Bitbucket &amp; GitLab and is a
         const counts = await getGitHubCounts(config);
         ```
 
-4.  The returned result (`counts`) is an object with two or three properties:
+4.  The returned result (`counts`) is an object with one or more properties (based on what you've requested):
 
-      - `commits` is your total number of commits
-      - `projects` is the number of projects you've contributed to
-      - `pullRequests` is the number of pull/merge requests you've authored (if requested)
+      - `commits` total number of your commits
+      - `projects` total number of projects you've contributed to
+      - `pullRequests` total number of pull/merge requests you've authored
 
 `getGitHubCounts` in the above example can be replaced with `getBitbucketCounts` or `getGitLabCounts`.
 
@@ -81,7 +83,7 @@ This contribution counter is for 3 VCSs: GitHub, Bitbucket &amp; GitLab and is a
 
 ### v1 to v2
 
-In version 2, the only braking change is that only functions can be imported/required, instead of Counter classes.
+In version 2, the only breaking change is that only functions can be imported/required, instead of Counter classes.
 
 To upgrade you will need to import/require the 3 new functions: `getBitbucketCounts`, `getGitHubCounts` &amp; `getGitLabCounts` instead of `Bitbucket`, `GitHub` &amp; `GitLab`.
 Where before you created an instance of a class (e.g. `GitHub`) and passed in an object of config, then called a function (`getCounters`) to get the counts.
